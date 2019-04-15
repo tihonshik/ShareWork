@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ShareWork.BLL.Entities;
+using ShareWork.DAL.Entities;
 
-namespace ShareWork.BLL.Interfaces
+namespace ShareWork.DAL.Interfaces
 {
     public interface ICategoryRepository
     {

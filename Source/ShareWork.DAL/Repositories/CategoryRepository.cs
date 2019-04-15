@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity.Migrations;
-using ShareWork.BLL.Entities;
-using ShareWork.BLL.Interfaces;
 
-namespace ShareWork.BLL.Repositories
+using ShareWork.DAL.Entities;
+using ShareWork.DAL.Interfaces;
+
+namespace ShareWork.DAL.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {

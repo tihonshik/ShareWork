@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ShareWork.BLL.Entities
+namespace ShareWork.DAL
+    .Entities
 {
     [Table("VerifyOrders")]
     public class VerifyOrder

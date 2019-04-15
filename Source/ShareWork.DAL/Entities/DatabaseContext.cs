@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace ShareWork.BLL.Entities
+namespace ShareWork.DAL.Entities
 {
     public class DatabaseContext : DbContext
     {

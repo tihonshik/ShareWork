@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
-using ShareWork.BLL.Entities;
-using ShareWork.BLL.Interfaces;
+using ShareWork.DAL.Entities;
+using ShareWork.DAL.Interfaces;
 using EntityState = System.Data.Entity.EntityState;
 
-namespace ShareWork.BLL.Repositories
+namespace ShareWork.DAL.Repositories
 {
     public class OrderRepository : IOrderRepository
     {

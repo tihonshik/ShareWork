@@ -203,6 +203,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShareWork.BLL\ShareWork.BLL.csproj">
+      <Project>{5374e10f-8f98-475a-9b60-a7f32cefc86f}</Project>
+      <Name>ShareWork.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareWork.DAL\ShareWork.DAL.csproj">
+      <Project>{e64b8155-56f9-487f-a992-50dbe343ba7e}</Project>
+      <Name>ShareWork.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareWork.IoC\ShareWork.IoC.csproj">
+      <Project>{fb949ac2-b7f5-4668-a53b-39cac5b21240}</Project>
+      <Name>ShareWork.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareWork.Model\ShareWork.Model.csproj">
+      <Project>{153d7111-c113-4442-89ba-910c0917050a}</Project>
+      <Name>ShareWork.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

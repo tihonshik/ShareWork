@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShareWork.BLL.Interfaces
+namespace ShareWork.DAL.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ShareWork.BLL.Entities
+namespace ShareWork.DAL.Entities
 {
     [Table("Order")]
     public class Order

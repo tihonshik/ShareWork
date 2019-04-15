@@ -50,10 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ICategoryService.cs" />
+    <Compile Include="Interfaces\IClientService.cs" />
+    <Compile Include="Interfaces\IOrderService.cs" />
+    <Compile Include="Interfaces\IVerifyOrderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\CategoryService.cs" />
+    <Compile Include="Service\ClientService.cs" />
+    <Compile Include="Service\OrderService.cs" />
+    <Compile Include="Service\VerifyOrderService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ShareWork.DAL\ShareWork.DAL.csproj">
+      <Project>{e64b8155-56f9-487f-a992-50dbe343ba7e}</Project>
+      <Name>ShareWork.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareWork.Model\ShareWork.Model.csproj">
+      <Project>{153d7111-c113-4442-89ba-910c0917050a}</Project>
+      <Name>ShareWork.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

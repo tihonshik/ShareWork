@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using ShareWork.BLL.Entities;
-using ShareWork.BLL.Interfaces;
+using ShareWork.DAL.Entities;
+using ShareWork.DAL.Interfaces;
 
-namespace ShareWork.BLL.Repositories
+namespace ShareWork.DAL.Repositories
 {
     public class VerifyOrderRepository : IVerifyOrderRepository
     {
