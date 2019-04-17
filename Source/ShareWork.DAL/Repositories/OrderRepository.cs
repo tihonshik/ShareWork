@@ -18,22 +18,22 @@ namespace ShareWork.DAL.Repositories
 
         public IEnumerable<Order> GetAll()
         {
-            return _context.Orders.Include(o => o.OrderId).Include(o => o.CustomerId);
+            return _context.Orders.Include(o => o.Id).Include(o => o.CustomerId);
         }
 
         public IEnumerable<Order> GetAllUserOrders(int userId)
         {
-            return _context.Orders.Include(o => o.OrderId).Include(o => o.CategoryId).Where(o => o.CustomerId == userId);
+            return _context.Orders.Include(o => o.Id).Include(o => o.CategoryId).Where(o => o.CustomerId == userId);
         }
 
         public Order GetById(int id)
         {
-            return _context.Orders.Include(o => o.OrderId).Include(o => o.CustomerId).Where(o => o.OrderId == id).FirstOrDefault();
+            return _context.Orders.Include(o => o.Id).Include(o => o.CustomerId).Where(o => o.Id == id).FirstOrDefault();
         }
 
         public Order GetByIdUserOrder(int userId, int orderId)
         {
-            return _context.Orders.Include(o => o.CustomerId).Include(o => o.OrderId).Where(o => o.CustomerId == userId && o.OrderId == orderId).FirstOrDefault();
+            return _context.Orders.Include(o => o.CustomerId).Include(o => o.Id).Where(o => o.CustomerId == userId && o.Id == orderId).FirstOrDefault();
         }
 
         //Booking

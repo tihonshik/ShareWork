@@ -27,17 +27,17 @@ namespace ShareWork.DAL.Repositories
 
         public IEnumerable<VerifyOrder> GetAll()
         {
-            return _context.VerifyOrders.Include(o => o.OrderId).Include(o => o.ServiceProviderId);
+            return _context.VerifyOrders.Include(o => o.Id).Include(o => o.ServiceProvider);
         }
 
         public IEnumerable<VerifyOrder> GetAllUserOrders(int orderId)
         {
-            return _context.VerifyOrders.Include(o => o.OrderId).Include(o => o.ServiceProviderId).Where(o => o.OrderId == orderId);
+            return _context.VerifyOrders.Include(o => o.Id).Include(o => o.ServiceProvider).Where(o => o.Id == orderId);
         }
 
         public VerifyOrder GetById(int id)
         {
-            return _context.VerifyOrders.Include(o => o.OrderId).Include(o => o.ServiceProviderId).Where(o => o.OrderId == id).FirstOrDefault();
+            return _context.VerifyOrders.Include(o => o.Id).Include(o => o.ServiceProvider).Where(o => o.Id == id).FirstOrDefault();
         }
 
 

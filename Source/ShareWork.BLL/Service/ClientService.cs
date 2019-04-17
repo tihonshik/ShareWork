@@ -22,7 +22,7 @@ namespace ShareWork.BLL.Service
                 .Select(u => 
                     new ClientVM
                     {
-                        ClientId = u.ClientId,
+                        ClientId = u.Id,
                         FirstName = u.FirstName,
                         LastName = u.LastName,
                         PhoneNumber = u.PhoneNumber
@@ -34,7 +34,7 @@ namespace ShareWork.BLL.Service
             _unitOfWork.ClientRep.Create(
                 new Client
                 {
-                    ClientId = model.ClientId,
+                    Id = model.ClientId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     PhoneNumber = model.PhoneNumber
@@ -46,7 +46,7 @@ namespace ShareWork.BLL.Service
         {
             Client user = new Client
             {
-                ClientId = model.ClientId,
+                Id = model.ClientId,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 PhoneNumber = model.PhoneNumber

@@ -6,14 +6,15 @@ namespace ShareWork.DAL.Entities
         [Table("Category")]
         public class Categories
         {
-            public int CategoryId { get; set; }
+            
+            public int Id { get; set; }
 
             public string CategoryName { get; set; }
 
-            public ICollection<Order> Orderses { get; set; }
-            public Categories()
-            {
-                Orderses = new List<Order>();
-            }
+            public virtual ICollection<Order> Orderses { get; set; }
+            //public Categories()
+            //{
+            //    Orderses = new List<Order>();
+            //}
         }
 }

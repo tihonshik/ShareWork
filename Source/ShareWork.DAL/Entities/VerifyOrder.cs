@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShareWork.DAL
     .Entities
@@ -6,10 +7,11 @@ namespace ShareWork.DAL
     [Table("VerifyOrders")]
     public class VerifyOrder
     {
-            public int OrderId { get; set; }
+        [Key, ForeignKey("Order")]
+        public int Id { get; set; }
 
-            public Client ServiceProviderId { get; set; }
+            public virtual Client ServiceProvider { get; set; }
 
-            public Order Orders { get; set; }
+            public virtual Order Order { get; set; }
     }
 }

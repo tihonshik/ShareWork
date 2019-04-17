@@ -19,19 +19,19 @@ namespace ShareWork.BLL.Service
         public IEnumerable<VerifyOrderVM> GetAll()
         {
             return _unitOfWork.VerifyOrderRep.GetAll()
-                .Select(tour => new VerifyOrderVM { OrderId = tour.OrderId });
+                .Select(tour => new VerifyOrderVM { OrderId = tour.Id });
         }
 
         public VerifyOrderVM GetById(int id)
         {
             VerifyOrder verifyOrderService = _unitOfWork.VerifyOrderRep.GetById(id);
 
-            return new VerifyOrderVM { OrderId = verifyOrderService.OrderId };
+            return new VerifyOrderVM { OrderId = verifyOrderService.Id };
         }
 
         public void Create(VerifyOrderVM model)
         {
-            _unitOfWork.VerifyOrderRep.Create(new VerifyOrder { OrderId = model.OrderId });
+            _unitOfWork.VerifyOrderRep.Create(new VerifyOrder { Id = model.OrderId });
             _unitOfWork.Save();
         }
 
@@ -48,7 +48,7 @@ namespace ShareWork.BLL.Service
 
         public void Update(VerifyOrderVM model)
         {
-            _unitOfWork.VerifyOrderRep.Update(new VerifyOrder { OrderId = model.OrderId});
+            _unitOfWork.VerifyOrderRep.Update(new VerifyOrder { Id = model.OrderId});
             _unitOfWork.Save();
         }
     }

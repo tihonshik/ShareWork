@@ -16,4 +16,13 @@ namespace ShareWork.DAL.Entities
 
     }
 
+    public class StoreDbInitializer : DropCreateDatabaseIfModelChanges<DatabaseContext>
+    {
+        protected override void Seed(DatabaseContext db)
+        {
+            db.Categorieses.Add(new Categories {Id = 1, CategoryName = "Photo"});
+            db.SaveChanges();
+        }
+    }
+
 }

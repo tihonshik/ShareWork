@@ -22,7 +22,7 @@ namespace ShareWork.BLL.Service
                 .Select(o => 
                     new OrderVM
                     {
-                        OrderId = o.OrderId,
+                        OrderId = o.Id,
                         CategoryId = o.CategoryId,
                         Header = o.Header,
                         Discription = o.Discription,
@@ -37,7 +37,7 @@ namespace ShareWork.BLL.Service
 
             return new OrderVM
             {
-                OrderId = o.OrderId,
+                OrderId = o.Id,
                 CategoryId = o.CategoryId,
                 Header = o.Header,
                 Discription = o.Discription,
@@ -51,7 +51,7 @@ namespace ShareWork.BLL.Service
             _unitOfWork.OrdersRep.Create(
                 new Order
                 {
-                OrderId = model.OrderId,
+                Id = model.OrderId,
                 CategoryId = model.CategoryId,
                 Header = model.Header,
                 Discription = model.Discription,

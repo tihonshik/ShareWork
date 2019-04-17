@@ -19,19 +19,23 @@ namespace ShareWork.BLL.Service
         public IEnumerable<CategoryVM> GetAll()
         {
             return _unitOfWork.CategoryRep.GetAll()
-                .Select(h => new CategoryVM { CategoryId = h.CategoryId, CategoryName = h.CategoryName });
+                .Select(h => 
+                    new CategoryVM
+                    {
+                        CategoryId = h.Id, CategoryName = h.CategoryName
+                    }).ToList();
         }
 
         public CategoryVM GetById(int id)
         {
             Categories c = _unitOfWork.CategoryRep.GetById(id);
 
-            return new CategoryVM { CategoryId = c.CategoryId, CategoryName = c.CategoryName };
+            return new CategoryVM { CategoryId = c.Id, CategoryName = c.CategoryName };
         }
 
         public void Create(CategoryVM model)
         {
-            Categories categories = new Categories { CategoryId = model.CategoryId, CategoryName = model.CategoryName };
+            Categories categories = new Categories { Id = model.CategoryId, CategoryName = model.CategoryName };
 
             _unitOfWork.CategoryRep.Create(categories);
             _unitOfWork.Save();
@@ -50,7 +54,7 @@ namespace ShareWork.BLL.Service
 
         public void Update(CategoryVM model)
         {
-            _unitOfWork.CategoryRep.Update(new Categories { CategoryId = model.CategoryId, CategoryName = model.CategoryName });
+            _unitOfWork.CategoryRep.Update(new Categories { Id = model.CategoryId, CategoryName = model.CategoryName });
             _unitOfWork.Save();
         }
     }

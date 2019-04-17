@@ -30,9 +30,9 @@ namespace ShareWork.Web.Controllers
 
         public ActionResult Index()
         {
-            IEnumerable<OrderVM> orders = _orderService.GetAll().OrderBy(o => o.DateCreated);
+            return View(_categoryService.GetAll());
 
-            return View(orders);
+
         }
 
 
