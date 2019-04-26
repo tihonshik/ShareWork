@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using ShareWork.DAL.Entities;
 
 namespace ShareWork.DAL.Entities
 {
@@ -14,7 +15,12 @@ namespace ShareWork.DAL.Entities
         public virtual DbSet<Categories> Categorieses { get; set; }
         public virtual DbSet<VerifyOrder> VerifyOrders { get; set; }
 
+        public static DatabaseContext Create()
+        {
+            return new DatabaseContext();
+        }
     }
+
 
     public class StoreDbInitializer : DropCreateDatabaseIfModelChanges<DatabaseContext>
     {
